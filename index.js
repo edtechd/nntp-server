@@ -247,6 +247,9 @@ Nntp.prototype._getNewNews = function (/*session, time, wildmat*/) {
 };
 
 
+Nntp.prototype._connectionClose = function (/*session */) {
+};
+
 /*
  * Called when an internal error is occured in any of the commands
  */
