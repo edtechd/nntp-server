@@ -51,7 +51,7 @@ Nntp.prototype.listen = function (address) {
   host = parsed.hostname || 'localhost';
 
   if (parsed.protocol === 'nntps:') {
-    this.server = tls.createServer(this.options.tls, listener);
+    this.server = tls.createServer({key: this.options.key, cert: this.options.cert}, listener);
 
     port = parsed.port !== null ? parsed.port : 563;
   } else {
