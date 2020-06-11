@@ -100,7 +100,7 @@ Nntp.prototype.close = function () {
 Nntp.prototype._needAuth = function (session, command) {
   if (!this.options.requireAuth ||
      session.authenticated ||
-     /^(MODE|AUTHINFO|STARTTLS|CAPABILITIES|DATE)\b/i.test(command)) {
+     /^(MODE|AUTHINFO|STARTTLS|CAPABILITIES|DATE|QUIT)\b/i.test(command)) {
     return false;
   }
 
